@@ -1,0 +1,289 @@
+.products {
+  background-image: url(../../images/products-bg-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background-image: url(../../images/products-bg-mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../../images/products-bg-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/products-bg-tablet@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../../images/products-bg-desktop.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/products-bg-desktop@2x.jpg);
+    }
+  }
+}
+
+.products__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: calc(38 / 30);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-main-color;
+
+  margin-bottom: 145px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+    line-height: calc(43 / 34);
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: calc(45 / 36);
+    margin-bottom: 303px;
+  }
+}
+
+.products__title-span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: calc(27 / 22);
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: calc(37 / 30);
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 168px;
+  column-gap: 16px;
+}
+
+.products__item {
+  position: relative;
+  border-radius: 24px;
+  min-height: 428px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $pre-mobile) {
+    width: 280px;
+    margin: 0 auto;
+    padding: 123px 40px 16px 40px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $pre-tablet) {
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 126px 25px 16px 25px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 224px;
+    padding: 108px 26px 12px 26px;
+  }
+
+  &:nth-child(1) {
+    background-color: $bcg-first-product-color;
+  }
+
+  &:nth-child(1) .products__img::before {
+    background-image: url(../../images/product-1-mobile-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/product-1-mobile-tablet@2x.jpg);
+    }
+  }
+  
+  &:nth-child(2) {
+    background-color: $bcg-second-product-color;
+  }
+
+  &:nth-child(2) .products__img {
+    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  }
+
+  &:nth-child(2) .products__img::before {
+    background-image: url(../../images/product-2-mobile-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/product-2-mobile-tablet@2x.jpg);
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $bcg-third-product-accent-contacts-color;
+  }
+
+  &:nth-child(3) .products__img {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  }
+
+  &:nth-child(3) .products__img::before {
+    background-image: url(../../images/product-3-mobile-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/product-3-mobile-tablet@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 370px;
+    min-height: 536px;
+    padding: 165px 63px 60px 63px;
+
+    &:nth-child(1) .products__img::before {
+      background-image: url(../../images/product-1-desktop.jpg);
+    
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url(../../images/product-1-desktop@2x.jpg);
+      }
+    }
+
+    &:nth-child(2) .products__img::before {
+      background-image: url(../../images/product-2-desktop.jpg);
+    
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url(../../images/product-2-desktop@2x.jpg);
+      }
+    }
+
+    &:nth-child(3) .products__img::before {
+      background-image: url(../../images/product-3-desktop.jpg);
+    
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url(../../images/product-3-desktop@2x.jpg);
+      }
+    }
+  }
+}
+
+.products__img {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    @media screen and (min-width: $desktop) {
+      width: 302px;
+      height: 302px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 302px;
+    height: 302px;
+  }
+}
+
+.products__name {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $text-main-color;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: calc(27 / 22);
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: calc(37 / 30);
+  }
+}
+
+.products__desc {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(25 / 14);
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $text-main-color;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+  }
+}
+
+.products__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: auto auto 0 auto;
+  padding: 0;
+  color: $text-main-color;
+}
+
+.products__icon {
+  display: block;
+  fill: currentColor;
+}
